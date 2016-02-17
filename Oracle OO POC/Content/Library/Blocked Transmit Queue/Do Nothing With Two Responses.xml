@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operation id="7bb09535-402e-4e25-9b1f-b3282e5c8570">
+  <descriptionCdata><![CDATA[7bb09535-402e-4e25-9b1f-b3282e5c8570.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nResponses\:\n    success\n    failure\n</pre>
+]]></descriptionCdata>
+  <annotation>7bb09535-402e-4e25-9b1f-b3282e5c8570.description</annotation>
+  <name>Do Nothing With Two Responses</name>
+  <categories/>
+  <inputs/>
+  <possibleResponses>
+    <opResponse id="0f94ab26-7ed0-43ed-9ead-70e2da8a425b">
+      <annotation></annotation>
+      <name>Admin Port Up</name>
+      <isDefault>true</isDefault>
+      <onFailure>false</onFailure>
+      <type>RESOLVED</type>
+      <matchRules>
+        <expression id="57622f29-f83e-4ac0-a4ad-049286cbc961">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>returnResult</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="202f5ad7-75d5-4dfd-b906-112f56b54bdb">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text></text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>MATCH_AT_LEAST_ONE_WORD</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
+    </opResponse>
+    <opResponse id="3e67d262-56d4-42c2-8077-3ecdad550acd">
+      <annotation></annotation>
+      <name>Admin Port Down</name>
+      <isDefault>false</isDefault>
+      <onFailure>false</onFailure>
+      <type>NO_ACTION_TAKEN</type>
+      <matchRules/>
+    </opResponse>
+  </possibleResponses>
+  <availableResultExpressions/>
+  <resultExpression id="d37bca1b-cc2b-4a8f-9920-34ef4d9e71d6">
+    <annotation></annotation>
+    <name>returnResult</name>
+    <fieldName>returnResult</fieldName>
+    <sourceType>RAWRESULT</sourceType>
+    <filters/>
+  </resultExpression>
+  <iconSpec id="815c2b7c-f180-454a-a40f-a5d03a2fa31a">
+    <baseIcon>display_report.png</baseIcon>
+    <basePath>Utilities/</basePath>
+    <readOnly>false</readOnly>
+    <layers/>
+  </iconSpec>
+  <opRef>
+    <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+  </opRef>
+  <fieldValues/>
+  <groupAliasRef>
+    <refId>5233030c-af46-432b-a682-b326ca6bf2ae</refId>
+    <refName>RAS_Operator_Path</refName>
+  </groupAliasRef>
+  <overrideGroupAlias>${overrideJRAS}</overrideGroupAlias>
+</operation>
