@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DEFAULT</groupId>
+  <artifactId>Oracle OO POC</artifactId>
+  <version>0.8.9-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>DEFAULT</groupId>
+      <artifactId>HP Solutions</artifactId>
+      <version>[1.6.0]</version>
+    </dependency>
+    <dependency>
+      <groupId>DEFAULT</groupId>
+      <artifactId>Base</artifactId>
+      <version>[1.6.2]</version>
+    </dependency>
+  </dependencies>
+</project>
