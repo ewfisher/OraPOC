@@ -4,9 +4,11 @@
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.14e597c5-424a-4272-bf20-419bff444c15.description=<pre>\nRuns a diagnostic task against a device or device group.\n\nInputs\:\ncoreHost - The DNS name or IP Address of your NAS core.\ncorePort - The port to connect to your NAS core on.\ncoreProtocol - The protocol to connect to your NAS core with. Either HTTP or HTTPS.\ncoreUsername - The username for the NAS core.\ncorePassword - The password for the NAS user.\ndiagnosticName - A diagnostic to run. For example,  "NA Routing Table", "NA Interfaces" and "NA OSPF Neighbors'" etc. See the "NA Diagnostics" selection list and its description for detail. If integrate with Network Automation whose version is older than 7.50, change the default selection list to "NAS Diagnostics" selection list. \nip - The IP address of the network device.\ngroupName - The group name of a list of networked devices.\ncomment - The comment to tie to this action.\nrepeat - (\#min | \#\:\# | \#days | \#weeks | \#months) where \# is a positive integer. \#\:\# is hours\:minutes--the two integers do not have to be the same.\nstartDate - Date of the start of the task. May be in one of the following formats\:  YYYY\:MM\:DD\:HH\:MM e.g. 2002\:09\:06\:12\:30, now or tomorrow.\nreturnImmediately - A boolean value. If true (1), the operation will return once the task is scheduled. If false (0) the operation will wait for the task to complete before returning.\n\nResponses\:\nsuccess - The operation completed successfully.\nfailure - Something went wrong.\n\nReturns\:\nreturnResult - Text result of NAS diagnostic\n\nExtra Results\:\ncommandStatus - The status of the NAS command.\ntext - The response text of the NAS command.\nstackTrace - The stack trace (If any) of the NAS command.\n</pre>
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.4a28810a-9fe6-4cbc-8ca7-68d64540e990.prompt=TicketID\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.5940ef32-2d8a-45f2-aac1-d92d68cc618e.prompt=IP Address of Network Device\:
+d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.8cd97f4c-d3d5-4e9c-9aa0-301d8e50f8be.prompt=Ticket ID \#\: 
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.9656a0bc-85d7-49b9-9f93-5df9c4f31354.prompt=Diagnostic to Run\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.b2afe505-267a-40db-ad02-3d75eae88e5e.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nResponses\:\n    success\n    failure\n</pre>
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.c4dddbe1-2579-43e4-9909-0905b9fd84ea.prompt=NAS Core\:
+d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.e34bdfc4-535b-4ff2-a84d-fc6afd8da81e.prompt=Target Device IP\: 
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.e3862c16-5cb3-4252-8c19-f2303fdc113d.prompt=NA Core Host\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fbc66160-4af4-4e6e-a098-af8046f56a09.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nResponses\:\n    success\n    failure\n</pre>
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.description=<pre>\nRuns an existing script, specified by name, against a device or group of devices. The proper variant of the script will be applied to each device. If no variant of the script supports a given device, that device will be skipped. The script is run as a system task.\n\nInputs\:\n    coreHost - The DNS name or IP address of your NAS core.\n    corePort - The port used to connect to your NAS core.\nDefault value\: 443\n    coreProtocol - The protocol used to connect to your NAS core.\nDefault value\: https\nValid values\: http, https\n    coreUsername - The username for the NAS core.\n    corePassword - The password for the NAS user.\n    scriptName - Script / command name\n    isAdvanced - Should the command be an advanced script?\nValid values\: True, False\nDefault value\: False\n    startDate - Date of the start of the task.\n    groupName - The group name of a list of networked devices.\n    ip - The IP address of the network device.\n    lineByLine - Prefer to deploy line-by-line rather than file-based deployment. Ignored for advanced scripts, required by regular command scripts.\n    repeat - (\#min | \#\:\# | \#days | \#weeks | \#months) where \# is a positive integer. \#\:\# is hours\:minutes; The two integers do not have to be identical.\n    variables - A list of variables to be replaced in the script. These are provided as a list of name\=value pairs, separated by commas. Values can be surrounded in single-quotes ('). Within a quoted value, a single-quote can be embedded with two single-quote characters. \nExamples\: "variable1\=value1, varable2\='this is ''value 2'''"\n    returnImmediately - A boolean value that controls how the command script is run. A value of "true", 0, or "yes", will cause the operation to return once the command script is scheduled. A value of false, 1, or no, will cause the operation to wait until the script has been run before it returns.\n    parameters - Command line parameters for the script to run. Ignored for regular command scripts.\n    comment - The comment to tie to this action.\n    presnapshot - If false, this indicates that the snapshot that runs before the script should be skipped.\nValid values\: true, false\n    postsnapshot - If false, this indicates that the snapshot that runs after the script should be skipped. If "task", this indicates that snapshot after the script should run as a separate task.\nValid values\: true, false, task\n    timeout - Time in milliseconds to wait for the command to complete.\nDefault value\: 90000 (90 seconds).\n\nResults\:\n    returnResult - Text result of NAS script run.\n    commandStatus - The status of the NAS command.\n    text - The response text of the NAS command.\n    stackTrace - The stack trace (If any) of the NAS command.\n\nResponses\:\n    success - The operation completed as stated in the description.\n    failure - The operation completed unsuccessfully.\n\n\nNotes\:\n1. Command scripts enable you to run a custom set of commands on one or more devices, run scripts as a scheduled task, and use event rules to trigger scripts to run.\n2. Start date must be in one of the following formats\:\n     YYYY-MM-DD HH\:MM\:SS     e.g. 2002-09-06 12\:30\:00 \n     YYYY-MM-DD HH\:MM          e.g. 2002-09-06 12\:30\n     YYYY-MM-DD                      e.g. 2002-09-06 \n     YYYY/MM/DD                      e.g. 2002/09/06 \n     YYYY\:MM\:DD\:HH\:MM          e.g. 2002\:09\:06\:12\:30\n     Or, one of\: now, today, yesterday, tomorrow \n    Or, in the format\:  "x days time", where x  is a positive integer and is one of\: seconds, minutes, hours, days, weeks, months, years; and "time" is one of\: ago, before, later, after.\n3. The Advanced Scripting feature enables you to run custom scripts written in various command line languages, such as Expect and PERL. Advanced scripting enables the extended capability of conditional logic.\n4. The character "$" is reserved for the variable name and variables beginning with "tc_" are reserved for special use.\n5. Pre-Task / Post-Task Snapshot Options can be used if the system is configured to enable user overrides on the Configuration Mgmt Page under Administrative Settings.\n</pre>\n\n
@@ -14,7 +16,38 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
   <annotation></annotation>
   <name>Reset and Check Port</name>
   <categories/>
-  <inputs/>
+  <inputs>
+    <userInputBinding id="e34bdfc4-535b-4ff2-a84d-fc6afd8da81e">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>true</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>targetDevice</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.e34bdfc4-535b-4ff2-a84d-fc6afd8da81e.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+    <userInputBinding id="8cd97f4c-d3d5-4e9c-9aa0-301d8e50f8be">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>true</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>TicketID</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+      <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.8cd97f4c-d3d5-4e9c-9aa0-301d8e50f8be.prompt</prompt>
+      <isMultiSelect>false</isMultiSelect>
+      <sourceDelimiter>|</sourceDelimiter>
+    </userInputBinding>
+  </inputs>
   <possibleResponses>
     <opResponse id="e92969a1-c0c8-4fb8-8311-f649a407286d">
       <annotation></annotation>
@@ -227,7 +260,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
         </staticBinding>
         <userInputBinding id="5940ef32-2d8a-45f2-aac1-d92d68cc618e">
           <annotation></annotation>
-          <assignFromContext>false</assignFromContext>
+          <fromContextKey>targetDevice</fromContextKey>
+          <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
           <isList>false</isList>
@@ -328,7 +362,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
         </staticBinding>
         <userInputBinding id="4a28810a-9fe6-4cbc-8ca7-68d64540e990">
           <annotation></annotation>
-          <assignFromContext>false</assignFromContext>
+          <assignFromContext>true</assignFromContext>
           <assignToContext>true</assignToContext>
           <inputType>STRING</inputType>
           <isList>false</isList>

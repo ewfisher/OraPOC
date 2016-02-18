@@ -3,7 +3,7 @@
   <descriptionCdata><![CDATA[7bb09535-402e-4e25-9b1f-b3282e5c8570.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nResponses\:\n    success\n    failure\n</pre>
 ]]></descriptionCdata>
   <annotation>7bb09535-402e-4e25-9b1f-b3282e5c8570.description</annotation>
-  <name>Do Nothing With Two Responses</name>
+  <name>Port Decision Path</name>
   <categories/>
   <inputs/>
   <possibleResponses>
