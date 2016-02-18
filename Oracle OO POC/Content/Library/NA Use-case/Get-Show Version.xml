@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow id="ae3366c0-4ac0-4f84-bf23-016c713ec9cc">
-  <descriptionCdata><![CDATA[ae3366c0-4ac0-4f84-bf23-016c713ec9cc.112ec739-dc0b-468d-9b72-27fe7a4c191d.prompt=IP Address of Network Device\:
+  <descriptionCdata><![CDATA[ae3366c0-4ac0-4f84-bf23-016c713ec9cc.0105b54a-5ee7-4ea7-8b97-11c793859a29.callout=This will get "sh version" from Cisco device.  Run this by calling IP address as input.
+ae3366c0-4ac0-4f84-bf23-016c713ec9cc.112ec739-dc0b-468d-9b72-27fe7a4c191d.prompt=IP Address of Network Device\:
+ae3366c0-4ac0-4f84-bf23-016c713ec9cc.16105167-533e-484b-82b1-5c8bfdd2621a.description=<pre>\nThis operation does not do anything. It can be used to filter flow variables by defining them as inputs and filtering them in the Results tab.\n\nInputs\:\n    field1 \u2013 An optional input that can be used for filtering flow variables.\n    field2 \u2013 An optional input that can be used for filtering flow variables.\n    field3 \u2013 An optional input that can be used for filtering flow variables.\n    field4 \u2013 An optional input that can be used for filtering flow variables.\n\nResults\:\n    returnResult - This is the primary output. It contains the value of  "field1" as it was specified at input or when filtered. \n\nResponses\:\n    success - The operation completed as stated in the description.\n</pre>
+ae3366c0-4ac0-4f84-bf23-016c713ec9cc.16105167-533e-484b-82b1-5c8bfdd2621a.prompt=${display}
 ae3366c0-4ac0-4f84-bf23-016c713ec9cc.5b1dee93-2984-421c-b123-73bf4ad6de7e.prompt=NAS Core\:
 ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.description=<pre>\nRuns an existing script, specified by name, against a device or group of devices. The proper variant of the script will be applied to each device. If no variant of the script supports a given device, that device will be skipped. The script is run as a system task.\n\nInputs\:\n    coreHost - The DNS name or IP address of your NAS core.\n    corePort - The port used to connect to your NAS core.\nDefault value\: 443\n    coreProtocol - The protocol used to connect to your NAS core.\nDefault value\: https\nValid values\: http, https\n    coreUsername - The username for the NAS core.\n    corePassword - The password for the NAS user.\n    scriptName - Script / command name\n    isAdvanced - Should the command be an advanced script?\nValid values\: True, False\nDefault value\: False\n    startDate - Date of the start of the task.\n    groupName - The group name of a list of networked devices.\n    ip - The IP address of the network device.\n    lineByLine - Prefer to deploy line-by-line rather than file-based deployment. Ignored for advanced scripts, required by regular command scripts.\n    repeat - (\#min | \#\:\# | \#days | \#weeks | \#months) where \# is a positive integer. \#\:\# is hours\:minutes; The two integers do not have to be identical.\n    variables - A list of variables to be replaced in the script. These are provided as a list of name\=value pairs, separated by commas. Values can be surrounded in single-quotes ('). Within a quoted value, a single-quote can be embedded with two single-quote characters. \nExamples\: "variable1\=value1, varable2\='this is ''value 2'''"\n    returnImmediately - A boolean value that controls how the command script is run. A value of "true", 0, or "yes", will cause the operation to return once the command script is scheduled. A value of false, 1, or no, will cause the operation to wait until the script has been run before it returns.\n    parameters - Command line parameters for the script to run. Ignored for regular command scripts.\n    comment - The comment to tie to this action.\n    presnapshot - If false, this indicates that the snapshot that runs before the script should be skipped.\nValid values\: true, false\n    postsnapshot - If false, this indicates that the snapshot that runs after the script should be skipped. If "task", this indicates that snapshot after the script should run as a separate task.\nValid values\: true, false, task\n    timeout - Time in milliseconds to wait for the command to complete.\nDefault value\: 90000 (90 seconds).\n\nResults\:\n    returnResult - Text result of NAS script run.\n    commandStatus - The status of the NAS command.\n    text - The response text of the NAS command.\n    stackTrace - The stack trace (If any) of the NAS command.\n\nResponses\:\n    success - The operation completed as stated in the description.\n    failure - The operation completed unsuccessfully.\n\n\nNotes\:\n1. Command scripts enable you to run a custom set of commands on one or more devices, run scripts as a scheduled task, and use event rules to trigger scripts to run.\n2. Start date must be in one of the following formats\:\n     YYYY-MM-DD HH\:MM\:SS     e.g. 2002-09-06 12\:30\:00 \n     YYYY-MM-DD HH\:MM          e.g. 2002-09-06 12\:30\n     YYYY-MM-DD                      e.g. 2002-09-06 \n     YYYY/MM/DD                      e.g. 2002/09/06 \n     YYYY\:MM\:DD\:HH\:MM          e.g. 2002\:09\:06\:12\:30\n     Or, one of\: now, today, yesterday, tomorrow \n    Or, in the format\:  "x days time", where x  is a positive integer and is one of\: seconds, minutes, hours, days, weeks, months, years; and "time" is one of\: ago, before, later, after.\n3. The Advanced Scripting feature enables you to run custom scripts written in various command line languages, such as Expect and PERL. Advanced scripting enables the extended capability of conditional logic.\n4. The character "$" is reserved for the variable name and variables beginning with "tc_" are reserved for special use.\n5. Pre-Task / Post-Task Snapshot Options can be used if the system is configured to enable user overrides on the Configuration Mgmt Page under Administrative Settings.\n</pre>\n\n
 ]]></descriptionCdata>
@@ -40,7 +43,18 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
     <readOnly>false</readOnly>
     <layers/>
   </iconSpec>
-  <callouts/>
+  <callouts>
+    <callout id="0105b54a-5ee7-4ea7-8b97-11c793859a29">
+      <text>ae3366c0-4ac0-4f84-bf23-016c713ec9cc.0105b54a-5ee7-4ea7-8b97-11c793859a29.callout</text>
+      <bounds>
+        <x>539.0</x>
+        <y>104.0</y>
+        <width>176.0</width>
+        <height>102.0</height>
+      </bounds>
+      <layer>-1</layer>
+    </callout>
+  </callouts>
   <checkPointFlow>true</checkPointFlow>
   <compatibleRuntimeContext>false</compatibleRuntimeContext>
   <historyCheckPointFlow>true</historyCheckPointFlow>
@@ -121,8 +135,8 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>USERNAME</identityAttribute>
         </identityBinding>
@@ -139,8 +153,8 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>PASSWORD</identityAttribute>
         </identityBinding>
@@ -154,7 +168,7 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <isPersisted>true</isPersisted>
           <inputSymbol>scriptName</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>Cisco IOS Show Version</value>
+          <value>Cisco IOS show Version</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="52e42dc5-6799-4d27-8260-c75c49e4eba4">
@@ -255,6 +269,7 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <isPersisted>true</isPersisted>
           <inputSymbol>returnImmediately</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>false</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="f434a40a-fae2-4fbe-ba26-7efd20cb1c8d">
@@ -348,7 +363,7 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
             <y>0.0</y>
           </labelPosition>
         </transition>
-        <transition id="444ef9ec-d0cd-43f8-85c7-e81312708bdb">
+        <transition id="61166042-b963-404f-b43c-59455c4bc2e4">
           <annotation></annotation>
           <name>success</name>
           <command>NEXT</command>
@@ -357,19 +372,19 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <shouldHandoff>false</shouldHandoff>
           <transitionValue>0.0</transitionValue>
           <destination>
-            <refId>1b466971-ff82-444e-ba59-fb06aa17e3f1</refId>
+            <refId>16105167-533e-484b-82b1-5c8bfdd2621a</refId>
           </destination>
           <source>
             <refId>d6e9aab1-c1b5-4691-a1ba-48045a9271a0</refId>
           </source>
           <positions>
             <point>
-              <x>581.0</x>
-              <y>267.0</y>
+              <x>571.0</x>
+              <y>269.0</y>
             </point>
             <point>
-              <x>1141.0</x>
-              <y>266.0</y>
+              <x>715.0</x>
+              <y>247.0</y>
             </point>
           </positions>
           <labelPosition>
@@ -382,7 +397,22 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
       <opRef>
         <refId>6b3ebf5c-682d-41aa-94c4-d309705763a3</refId>
       </opRef>
-      <assignments/>
+      <assignments>
+        <flowVariableAssignment id="5614dab8-06aa-4550-a682-b53cf108a642">
+          <annotation></annotation>
+          <name>assignment</name>
+          <action>OVERWRITE</action>
+          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
+          <contextKey>display</contextKey>
+          <expression id="5580ee07-df14-432d-a3ad-9dfcf034d924">
+            <annotation></annotation>
+            <name>Result Field: text</name>
+            <fieldName>text</fieldName>
+            <sourceType>RAWRESULT</sourceType>
+            <filters/>
+          </expression>
+        </flowVariableAssignment>
+      </assignments>
       <throttleSize>0</throttleSize>
     </step>
     <returnStep id="1b466971-ff82-444e-ba59-fb06aa17e3f1">
@@ -390,7 +420,7 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
       <name>Resolved : success</name>
       <bounds>
         <x>825.0</x>
-        <y>235.0</y>
+        <y>292.0</y>
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
@@ -473,6 +503,106 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
       <returnStepType>ERROR</returnStepType>
       <assignments/>
     </returnStep>
+    <step id="16105167-533e-484b-82b1-5c8bfdd2621a">
+      <annotation>ae3366c0-4ac0-4f84-bf23-016c713ec9cc.16105167-533e-484b-82b1-5c8bfdd2621a.description</annotation>
+      <name>Display Version Output</name>
+      <bounds>
+        <x>669.0</x>
+        <y>239.0</y>
+      </bounds>
+      <layer>-1</layer>
+      <hideInbound>false</hideInbound>
+      <addResultToRunContext>false</addResultToRunContext>
+      <isCriticalStep>true</isCriticalStep>
+      <isNonBlocking>false</isNonBlocking>
+      <isParallelStep>false</isParallelStep>
+      <isSingleResponse>false</isSingleResponse>
+      <recordInHistory>false</recordInHistory>
+      <recordRawOutput>true</recordRawOutput>
+      <recordPrimaryOutput>true</recordPrimaryOutput>
+      <checkPointStep>true</checkPointStep>
+      <historyCheckPointStep>true</historyCheckPointStep>
+      <scriptResultStep>false</scriptResultStep>
+      <userPrompt>ae3366c0-4ac0-4f84-bf23-016c713ec9cc.16105167-533e-484b-82b1-5c8bfdd2621a.prompt</userPrompt>
+      <bindings>
+        <staticBinding id="382279cf-0f73-46e9-9f7e-790bb08d10de">
+          <annotation></annotation>
+          <assignFromContext>true</assignFromContext>
+          <assignToContext>false</assignToContext>
+          <inputType>STRING</inputType>
+          <isList>false</isList>
+          <required>false</required>
+          <isPersisted>true</isPersisted>
+          <inputSymbol>display</inputSymbol>
+          <listDelimiter>,</listDelimiter>
+          <value></value>
+          <record>false</record>
+        </staticBinding>
+      </bindings>
+      <transitions>
+        <transition id="9fc0af50-7592-43d1-96a3-a8410b96ab22">
+          <annotation></annotation>
+          <name>success</name>
+          <command>NEXT</command>
+          <linkMode>false</linkMode>
+          <responseSymbol>success</responseSymbol>
+          <shouldHandoff>false</shouldHandoff>
+          <transitionValue>0.0</transitionValue>
+          <destination>
+            <refId>1b466971-ff82-444e-ba59-fb06aa17e3f1</refId>
+          </destination>
+          <source>
+            <refId>16105167-533e-484b-82b1-5c8bfdd2621a</refId>
+          </source>
+          <positions>
+            <point>
+              <x>715.0</x>
+              <y>247.0</y>
+            </point>
+            <point>
+              <x>875.0</x>
+              <y>326.0</y>
+            </point>
+          </positions>
+          <labelPosition>
+            <x>333.0</x>
+            <y>0.0</y>
+          </labelPosition>
+        </transition>
+      </transitions>
+      <properties>
+        <entry>
+          <key>Prompt Title</key>
+          <modelValue id="9efc1dd0-d590-4696-8518-b60e5e007a4b">
+            <doubleValue>0.0</doubleValue>
+            <stringValue>IOS Version Display</stringValue>
+            <encrypted>false</encrypted>
+            <type>9</type>
+          </modelValue>
+        </entry>
+        <entry>
+          <key>Prompt Width</key>
+          <modelValue id="8f60938a-cb6a-4ae8-87de-53d72dbee499">
+            <doubleValue>450.0</doubleValue>
+            <encrypted>false</encrypted>
+            <type>5</type>
+          </modelValue>
+        </entry>
+        <entry>
+          <key>Prompt Height</key>
+          <modelValue id="a9a498c5-71bc-48a6-90ab-0dd695214b13">
+            <doubleValue>350.0</doubleValue>
+            <encrypted>false</encrypted>
+            <type>5</type>
+          </modelValue>
+        </entry>
+      </properties>
+      <opRef>
+        <refId>ddd79f22-8b1e-4605-88d5-d912bb2da2b9</refId>
+      </opRef>
+      <assignments/>
+      <throttleSize>0</throttleSize>
+    </step>
   </steps>
   <startSteps>d6e9aab1-c1b5-4691-a1ba-48045a9271a0</startSteps>
 </flow>

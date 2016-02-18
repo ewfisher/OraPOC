@@ -3,10 +3,7 @@
   <descriptionCdata><![CDATA[f8d7aef3-90f8-48d1-9def-c20b88580761.02d39742-75e3-4dbc-8824-7a7159ce23da.prompt=ACL ID\:
 f8d7aef3-90f8-48d1-9def-c20b88580761.2632ea0c-a6c3-4272-b2e8-e15a902f65b4.prompt=IP\: 
 f8d7aef3-90f8-48d1-9def-c20b88580761.38d8dd44-362f-49cc-9175-30f87b10fbdf.description=<pre>Show ACL information for a ACL\n\nInputs\:\ncoreHost - The DNS name or IP Address of your NAS core.\ncorePort - The port to connect to your NAS core on.\ncoreProtocol - The protocol to connect to your NAS core with. Either HTTP or HTTPS.\ncoreUsername - The username for the NAS core.\ncorePassword - The password for the NAS user.\nid - The ID of the ACL of a device.\n\nResponses\:\nsuccess - The operation completed successfully.\nfailure - Something went wrong.\n\nReturns\:\nreturnResult - error information, if any\n\nExtra Results\:\ncommandStatus - The status of the NAS command.\ntext - The response text of the NAS command.\nstackTrace - The stack trace (If any) of the NAS command.\naclScript - Script data for the ACL (If more than one ACL, this is a comma delimited list).\ndeviceAclID - Device's ACL ID number (If more than one ACL, this is a comma delimited list).\naclID - ACL ID number (If more than one ACL, this is a comma delimited list).\naclHandle - ACL handle (If more than one ACL, this is a comma delimited list).\naclType - Type of the ACL (If more than one ACL, this is a comma delimited list).\nappState - Application state (If more than one ACL, this is a comma delimited list).\nlastModifiedAccessLogID - Access log ID for last modification (If more than one ACL, this is a comma delimited list).\nmostRecent - Is this the most recent? (1 / 0) (If more than one ACL, this is a comma delimited list).\nlastModifiedDate - The date when this object was last modified (yyyy-MM-dd HH\:mm\:ss.SSS)</pre>
-f8d7aef3-90f8-48d1-9def-c20b88580761.a7811e1b-4e9e-4624-938a-8fb3995deb7c.prompt=Password\:
-f8d7aef3-90f8-48d1-9def-c20b88580761.c4058b16-b869-4703-bd88-a8fb8ac0a5b7.prompt=NAS Core\:
 f8d7aef3-90f8-48d1-9def-c20b88580761.f4151666-2de6-4dc6-8fd5-c6a0e3b250f0.prompt=NAS Core\:
-f8d7aef3-90f8-48d1-9def-c20b88580761.f4ea3364-c2ec-4a0d-878c-2ffcaec5438d.prompt=Username\:
 f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.description=<pre>Gets a list of devices, or gets detailed information about a specific device.\n\nInputs\:\ncoreHost - The DNS name or IP Address of your NAS core.\ncorePort - The port to connect to your NAS core on.\ncoreProtocol - The protocol to connect to your NAS core with. Either HTTP or HTTPS.\ncoreUsername - The username for the NAS core.\ncorePassword - The password for the NAS user.\nip - The IP address of the network device.\ngroupName - the name of the group that the device is in.\nfamily - The name of the family the device is in.\n\nResponses\:\nsuccess - retrieved successfully\nfailure - failed to retrieve data\n\nReturns\:\nreturnResult - Comma delimited list of devices or information about a single device\n\nExtra Results\:\ncommandStatus - The status of the NAS command.\ntext - The response text of the NAS command.\nstackTrace - The stack trace (If any) of the NAS command.\ndeviceID - The ID of the device (If more than one device, this is a comma delimited list).\ndeviceHostname - The hostname of the device (If more than one device, this is a comma delimited list).\ndeviceIP - The ip address of the device (If more than one device, this is a comma delimited list).\ndeviceSiteName - The site of the device (If more than one device, this is a comma delimited list).\ndeviceStatus - The status of the device (If more than one device, this is a comma delimited list).\ndeviceType - The type of the device (If more than one device, this is a comma delimited list).</pre>
 ]]></descriptionCdata>
   <annotation></annotation>
@@ -114,7 +111,7 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <value>https</value>
           <record>false</record>
         </staticBinding>
-        <identityBinding id="8c28bf19-12a9-46e0-9d67-fd8a1311a5f0">
+        <identityBinding id="6e87b20f-e838-4e8c-a553-78ee85205ee7">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -126,12 +123,12 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>USERNAME</identityAttribute>
         </identityBinding>
-        <identityBinding id="87380279-8893-4cef-afc9-2a9e592de6bc">
+        <identityBinding id="7a1c24d9-8b64-40fe-82b9-cf3ede699c97">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -144,8 +141,8 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>PASSWORD</identityAttribute>
         </identityBinding>
@@ -366,9 +363,10 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
       <scriptResultStep>false</scriptResultStep>
       <userPrompt></userPrompt>
       <bindings>
-        <userInputBinding id="c4058b16-b869-4703-bd88-a8fb8ac0a5b7">
+        <userInputBinding id="4b16f8e6-c49b-449d-ba84-697e131b268a">
           <annotation></annotation>
-          <assignFromContext>false</assignFromContext>
+          <fromContextKey>NA coreHost</fromContextKey>
+          <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
           <isList>false</isList>
@@ -377,7 +375,7 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <inputSymbol>coreHost</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>f8d7aef3-90f8-48d1-9def-c20b88580761.c4058b16-b869-4703-bd88-a8fb8ac0a5b7.prompt</prompt>
+          <prompt></prompt>
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
@@ -407,22 +405,24 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <value>https</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="f4ea3364-c2ec-4a0d-878c-2ffcaec5438d">
+        <identityBinding id="9deba4b3-720a-4aa5-b4bc-d25779947e60">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
-          <inputType>STRING</inputType>
+          <inputType>ENCRYPTED</inputType>
           <isList>false</isList>
           <required>true</required>
           <isPersisted>true</isPersisted>
           <inputSymbol>coreUsername</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>f8d7aef3-90f8-48d1-9def-c20b88580761.f4ea3364-c2ec-4a0d-878c-2ffcaec5438d.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
-        <userInputBinding id="a7811e1b-4e9e-4624-938a-8fb3995deb7c">
+          <link>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
+          </link>
+          <identityAttribute>USERNAME</identityAttribute>
+        </identityBinding>
+        <identityBinding id="6272e6ce-d159-4145-bf38-a53c5aecd97a">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -434,10 +434,12 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <inputSymbol>corePassword</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>f8d7aef3-90f8-48d1-9def-c20b88580761.a7811e1b-4e9e-4624-938a-8fb3995deb7c.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+          <link>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
+          </link>
+          <identityAttribute>PASSWORD</identityAttribute>
+        </identityBinding>
         <userInputBinding id="02d39742-75e3-4dbc-8824-7a7159ce23da">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>

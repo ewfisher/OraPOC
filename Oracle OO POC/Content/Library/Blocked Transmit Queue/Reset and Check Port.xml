@@ -161,8 +161,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>USERNAME</identityAttribute>
         </identityBinding>
@@ -179,8 +179,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>PASSWORD</identityAttribute>
         </identityBinding>
@@ -194,7 +194,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <isPersisted>true</isPersisted>
           <inputSymbol>scriptName</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>Cisco IOS Admin Port Up</value>
+          <value>Cisco IOS Admin Port</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="882a66ff-e8bd-430a-9683-e3fb7156e7a3">
@@ -711,8 +711,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>USERNAME</identityAttribute>
         </identityBinding>
@@ -729,8 +729,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
           <link>
-            <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
-            <refName>NA Admin User</refName>
+            <refId>da4a5af3-cde0-4c04-ae21-5b9a4af29292</refId>
+            <refName>HPOO User</refName>
           </link>
           <identityAttribute>PASSWORD</identityAttribute>
         </identityBinding>
