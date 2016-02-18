@@ -9,7 +9,7 @@
   <possibleResponses>
     <opResponse id="0f94ab26-7ed0-43ed-9ead-70e2da8a425b">
       <annotation></annotation>
-      <name>Admin Port Up</name>
+      <name>SNMP String Found</name>
       <isDefault>true</isDefault>
       <onFailure>false</onFailure>
       <type>RESOLVED</type>
@@ -19,12 +19,12 @@
           <name>Field_1</name>
           <fieldName>returnResult</fieldName>
           <sourceType>RAWRESULT</sourceType>
-          <containsEvaluator id="202f5ad7-75d5-4dfd-b906-112f56b54bdb">
+          <containsEvaluator id="bc9719af-1da7-4274-85d6-e475c671e12f">
             <annotation></annotation>
             <name>Config Item</name>
-            <text></text>
-            <ignoreCase>true</ignoreCase>
-            <matchType>MATCH_AT_LEAST_ONE_WORD</matchType>
+            <text>snmp-server community public RO 50	</text>
+            <ignoreCase>false</ignoreCase>
+            <matchType>MATCH_ALL_WORDS</matchType>
           </containsEvaluator>
           <filters/>
         </expression>
@@ -32,11 +32,26 @@
     </opResponse>
     <opResponse id="3e67d262-56d4-42c2-8077-3ecdad550acd">
       <annotation></annotation>
-      <name>Admin Port Down</name>
+      <name>SNMP String Not Found</name>
       <isDefault>false</isDefault>
       <onFailure>false</onFailure>
-      <type>NO_ACTION_TAKEN</type>
-      <matchRules/>
+      <type>ERROR</type>
+      <matchRules>
+        <expression id="d453440f-6b67-478c-a688-dbcdf4268fca">
+          <annotation></annotation>
+          <name>Field_1</name>
+          <fieldName>Field_1</fieldName>
+          <sourceType>RAWRESULT</sourceType>
+          <containsEvaluator id="22070ee8-099a-454b-bdf7-27097340f758">
+            <annotation></annotation>
+            <name>Config Item</name>
+            <text>snmp-server community public RO 50	</text>
+            <ignoreCase>true</ignoreCase>
+            <matchType>NOT_EXACT_MATCH</matchType>
+          </containsEvaluator>
+          <filters/>
+        </expression>
+      </matchRules>
     </opResponse>
   </possibleResponses>
   <availableResultExpressions/>
