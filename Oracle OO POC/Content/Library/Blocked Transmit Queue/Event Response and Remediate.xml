@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow id="d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0">
-  <descriptionCdata><![CDATA[d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.1f4b8415-d09e-4184-a54d-7df21b8669e4.callout=Did we find the required changes?
+  <descriptionCdata><![CDATA[d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.0a2f07e2-5d29-4fa3-9d8b-95d0b192a985.prompt=TicketID
+d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.1f4b8415-d09e-4184-a54d-7df21b8669e4.callout=Did we find the required changes?
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.40c1ee7d-ca0f-4b94-83d8-16e52a8f6fe4.callout=Run command script via HPE Network Automation to "repair" target device.
-d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.4a28810a-9fe6-4cbc-8ca7-68d64540e990.prompt=TicketID\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.56dc10c9-5157-49f7-8bf4-0153c1d41d15.callout=This flow will take a user input in the form of an event ID.  With this event ID, it will reference the event database and determine the ticket ID and device name.  Next, this information is used to provide remediation activities, verify remediation, and update the related ticket ID with a new task update.
-d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.5940ef32-2d8a-45f2-aac1-d92d68cc618e.prompt=IP Address of Network Device\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.884d5ed3-cba8-4db5-b2df-7f2bdbfc7fa4.callout=Check dump of event console and search for target device and ticket ID for related event.
-d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.a8d92756-2570-4b58-9bed-c0100b12c9b3.prompt=We were unsuccsessful to diagnose problem
+d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.a6a86665-4f1c-4a65-99a9-35a90dc0c4de.prompt=IP Address of Network Device\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.b2afe505-267a-40db-ad02-3d75eae88e5e.description=<pre>This is an operation that does nothing. It can be used for filtering flow variables by feeding them in as inputs and filtering them on the results tab.\n\nResponses\:\n    success\n    failure\n</pre>
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.c4dddbe1-2579-43e4-9909-0905b9fd84ea.prompt=NAS Core\:
-d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.f02be42b-55aa-473d-b461-3f7e394bf195.prompt=Event ID\:
 d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.description=<pre>\nRuns an existing script, specified by name, against a device or group of devices. The proper variant of the script will be applied to each device. If no variant of the script supports a given device, that device will be skipped. The script is run as a system task.\n\nInputs\:\n    coreHost - The DNS name or IP address of your NAS core.\n    corePort - The port used to connect to your NAS core.\nDefault value\: 443\n    coreProtocol - The protocol used to connect to your NAS core.\nDefault value\: https\nValid values\: http, https\n    coreUsername - The username for the NAS core.\n    corePassword - The password for the NAS user.\n    scriptName - Script / command name\n    isAdvanced - Should the command be an advanced script?\nValid values\: True, False\nDefault value\: False\n    startDate - Date of the start of the task.\n    groupName - The group name of a list of networked devices.\n    ip - The IP address of the network device.\n    lineByLine - Prefer to deploy line-by-line rather than file-based deployment. Ignored for advanced scripts, required by regular command scripts.\n    repeat - (\#min | \#\:\# | \#days | \#weeks | \#months) where \# is a positive integer. \#\:\# is hours\:minutes; The two integers do not have to be identical.\n    variables - A list of variables to be replaced in the script. These are provided as a list of name\=value pairs, separated by commas. Values can be surrounded in single-quotes ('). Within a quoted value, a single-quote can be embedded with two single-quote characters. \nExamples\: "variable1\=value1, varable2\='this is ''value 2'''"\n    returnImmediately - A boolean value that controls how the command script is run. A value of "true", 0, or "yes", will cause the operation to return once the command script is scheduled. A value of false, 1, or no, will cause the operation to wait until the script has been run before it returns.\n    parameters - Command line parameters for the script to run. Ignored for regular command scripts.\n    comment - The comment to tie to this action.\n    presnapshot - If false, this indicates that the snapshot that runs before the script should be skipped.\nValid values\: true, false\n    postsnapshot - If false, this indicates that the snapshot that runs after the script should be skipped. If "task", this indicates that snapshot after the script should run as a separate task.\nValid values\: true, false, task\n    timeout - Time in milliseconds to wait for the command to complete.\nDefault value\: 90000 (90 seconds).\n\nResults\:\n    returnResult - Text result of NAS script run.\n    commandStatus - The status of the NAS command.\n    text - The response text of the NAS command.\n    stackTrace - The stack trace (If any) of the NAS command.\n\nResponses\:\n    success - The operation completed as stated in the description.\n    failure - The operation completed unsuccessfully.\n\n\nNotes\:\n1. Command scripts enable you to run a custom set of commands on one or more devices, run scripts as a scheduled task, and use event rules to trigger scripts to run.\n2. Start date must be in one of the following formats\:\n     YYYY-MM-DD HH\:MM\:SS     e.g. 2002-09-06 12\:30\:00 \n     YYYY-MM-DD HH\:MM          e.g. 2002-09-06 12\:30\n     YYYY-MM-DD                      e.g. 2002-09-06 \n     YYYY/MM/DD                      e.g. 2002/09/06 \n     YYYY\:MM\:DD\:HH\:MM          e.g. 2002\:09\:06\:12\:30\n     Or, one of\: now, today, yesterday, tomorrow \n    Or, in the format\:  "x days time", where x  is a positive integer and is one of\: seconds, minutes, hours, days, weeks, months, years; and "time" is one of\: ago, before, later, after.\n3. The Advanced Scripting feature enables you to run custom scripts written in various command line languages, such as Expect and PERL. Advanced scripting enables the extended capability of conditional logic.\n4. The character "$" is reserved for the variable name and variables beginning with "tc_" are reserved for special use.\n5. Pre-Task / Post-Task Snapshot Options can be used if the system is configured to enable user overrides on the Configuration Mgmt Page under Administrative Settings.\n</pre>\n\n
 ]]></descriptionCdata>
   <annotation></annotation>
-  <name>Reset and Check Port</name>
+  <name>Event Response and Remediate</name>
   <categories/>
-  <inputs>
-    <userInputBinding id="f02be42b-55aa-473d-b461-3f7e394bf195">
-      <annotation></annotation>
-      <assignFromContext>true</assignFromContext>
-      <assignToContext>true</assignToContext>
-      <inputType>STRING</inputType>
-      <isList>false</isList>
-      <required>false</required>
-      <isPersisted>true</isPersisted>
-      <inputSymbol>EventID</inputSymbol>
-      <listDelimiter>,</listDelimiter>
-      <record>false</record>
-      <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.f02be42b-55aa-473d-b461-3f7e394bf195.prompt</prompt>
-      <isMultiSelect>false</isMultiSelect>
-      <sourceDelimiter>|</sourceDelimiter>
-    </userInputBinding>
-  </inputs>
+  <inputs/>
   <possibleResponses>
     <opResponse id="e92969a1-c0c8-4fb8-8311-f649a407286d">
       <annotation></annotation>
@@ -205,22 +187,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
       <opRef>
         <refId>e53d040e-cb36-4638-9ec3-3a6fb959d4b8</refId>
       </opRef>
-      <assignments>
-        <flowVariableAssignment id="020a42ef-1222-4d1f-8b98-014ce33417e8">
-          <annotation></annotation>
-          <name>assignment</name>
-          <action>OVERWRITE</action>
-          <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
-          <contextKey>ticketID</contextKey>
-          <expression id="fb1ed6bb-5568-4cc0-b794-1129f832c8ea">
-            <annotation></annotation>
-            <name>Result Field: FailureMessage</name>
-            <fieldName>FailureMessage</fieldName>
-            <sourceType>RAWRESULT</sourceType>
-            <filters/>
-          </expression>
-        </flowVariableAssignment>
-      </assignments>
+      <assignments/>
       <throttleSize>0</throttleSize>
     </step>
     <returnStep id="8a0546a1-3227-4309-ab8b-4a754312dde0">
@@ -315,7 +282,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <value>160217-000313</value>
           <record>false</record>
         </staticBinding>
-        <staticBinding id="590df716-6d4b-446e-bbc8-07778f554849">
+        <staticBinding id="91fbc98d-f635-4ca9-a37f-0dd280e57ba5">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -444,7 +411,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <value>160217-000313</value>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="a8d92756-2570-4b58-9bed-c0100b12c9b3">
+        <staticBinding id="af73480c-cd7a-45f4-a0e4-6349b005c09c">
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
@@ -454,11 +421,9 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <isPersisted>true</isPersisted>
           <inputSymbol>taskNote</inputSymbol>
           <listDelimiter>,</listDelimiter>
+          <value>We were unsuccsessful to diagnose problem</value>
           <record>false</record>
-          <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.a8d92756-2570-4b58-9bed-c0100b12c9b3.prompt</prompt>
-          <isMultiSelect>false</isMultiSelect>
-          <sourceDelimiter>|</sourceDelimiter>
-        </userInputBinding>
+        </staticBinding>
       </bindings>
       <transitions>
         <transition id="44847060-8c36-41f4-9260-c3406a9d1ed4">
@@ -788,9 +753,9 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="5940ef32-2d8a-45f2-aac1-d92d68cc618e">
+        <userInputBinding id="a6a86665-4f1c-4a65-99a9-35a90dc0c4de">
           <annotation></annotation>
-          <fromContextKey>targetDevice</fromContextKey>
+          <fromContextKey>TargetName</fromContextKey>
           <assignFromContext>true</assignFromContext>
           <assignToContext>false</assignToContext>
           <inputType>STRING</inputType>
@@ -800,7 +765,7 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <inputSymbol>ip</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.5940ef32-2d8a-45f2-aac1-d92d68cc618e.prompt</prompt>
+          <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.a6a86665-4f1c-4a65-99a9-35a90dc0c4de.prompt</prompt>
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
@@ -890,18 +855,18 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <listDelimiter>,</listDelimiter>
           <record>false</record>
         </staticBinding>
-        <userInputBinding id="4a28810a-9fe6-4cbc-8ca7-68d64540e990">
+        <userInputBinding id="0a2f07e2-5d29-4fa3-9d8b-95d0b192a985">
           <annotation></annotation>
           <assignFromContext>true</assignFromContext>
           <assignToContext>true</assignToContext>
           <inputType>STRING</inputType>
           <isList>false</isList>
-          <required>true</required>
+          <required>false</required>
           <isPersisted>true</isPersisted>
           <inputSymbol>TicketID</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
-          <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.4a28810a-9fe6-4cbc-8ca7-68d64540e990.prompt</prompt>
+          <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.0a2f07e2-5d29-4fa3-9d8b-95d0b192a985.prompt</prompt>
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>
         </userInputBinding>
@@ -977,10 +942,10 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <action>OVERWRITE</action>
           <assignmentTargetType>FLOW_VARIABLE</assignmentTargetType>
           <contextKey>Results</contextKey>
-          <expression id="3d8621ed-4434-4b54-a11f-0499e0b285a0">
+          <expression id="079fce6a-68f7-4cae-9c61-0ce479120ee7">
             <annotation></annotation>
-            <name>Result Field: text</name>
-            <fieldName>text</fieldName>
+            <name>Result Field: returnResult</name>
+            <fieldName>returnResult</fieldName>
             <sourceType>RAWRESULT</sourceType>
             <filters/>
           </expression>

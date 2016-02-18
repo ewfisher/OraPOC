@@ -5,7 +5,20 @@
   <annotation>7bb09535-402e-4e25-9b1f-b3282e5c8570.description</annotation>
   <name>Port Decision Path</name>
   <categories/>
-  <inputs/>
+  <inputs>
+    <resultBinding id="a081d8db-a0c1-4110-ba25-f3277fc1c93e">
+      <annotation></annotation>
+      <assignFromContext>true</assignFromContext>
+      <assignToContext>true</assignToContext>
+      <inputType>STRING</inputType>
+      <isList>false</isList>
+      <required>false</required>
+      <isPersisted>true</isPersisted>
+      <inputSymbol>Results</inputSymbol>
+      <listDelimiter>,</listDelimiter>
+      <record>false</record>
+    </resultBinding>
+  </inputs>
   <possibleResponses>
     <opResponse id="0f94ab26-7ed0-43ed-9ead-70e2da8a425b">
       <annotation></annotation>
@@ -40,7 +53,7 @@
         <expression id="d453440f-6b67-478c-a688-dbcdf4268fca">
           <annotation></annotation>
           <name>Field_1</name>
-          <fieldName>Field_1</fieldName>
+          <fieldName>returnResult</fieldName>
           <sourceType>RAWRESULT</sourceType>
           <containsEvaluator id="22070ee8-099a-454b-bdf7-27097340f758">
             <annotation></annotation>

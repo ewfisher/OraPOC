@@ -225,7 +225,7 @@ c549f766-beff-4f19-8f3e-46eacc0ca3b8.ed2e9462-e330-48ac-b1f3-a2d392568cc3.callou
       <userPrompt></userPrompt>
       <scriptlet id="af7626c5-511d-46f1-ab8e-5e7cdb162df0">
         <annotation></annotation>
-        <name>Step Set filters in Flow File System Cleanup on Linux (460876f3-595b-47e9-99bc-5a8dc2006b65)</name>
+        <name>Step Set filters in Flow File System Cleanup on Linux (65fbae34-3fdb-45ad-8952-78873f00e6f2)</name>
         <script>var script = &quot;#!/bin/sh\n&quot;;
 var delimiter = resolveValue(&quot;delimiter&quot;, &quot;,&quot;);
 
@@ -297,13 +297,8 @@ function getValue(inputName) {
           <isPersisted>true</isPersisted>
           <inputSymbol>SystemFilters</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>/tmp/*
-/var/tmp/*
-~/.thumbnails/*
-~/.cache/*
-~/.local/share/Trash/*
-~/.local/share/recently-used.xbel
-~/.bash_history</value>
+          <value>/tmp/zero*
+</value>
           <record>false</record>
         </staticBinding>
       </bindings>
@@ -696,7 +691,7 @@ function getValue(inputName) {
       <userPrompt></userPrompt>
       <scriptlet id="026bcff9-44f7-4b0c-b691-c34881796fa6">
         <annotation></annotation>
-        <name>Step Subtraction in Flow File System Cleanup on Linux (c9877899-7a25-4d4a-afb0-a624f782dcb0)</name>
+        <name>Step Subtraction in Flow File System Cleanup on Linux (0da99957-3ef2-4843-9067-d209fb14e115)</name>
         <script>var units = [&quot;bytes&quot;, &quot;KB&quot;, &quot;MB&quot;, &quot;GB&quot;, &quot;TB&quot;, &quot;PB&quot;]; //not standard
 
 var difference = scriptletRawResult[&quot;result&quot;];
