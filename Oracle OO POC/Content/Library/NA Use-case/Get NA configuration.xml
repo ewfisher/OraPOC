@@ -135,7 +135,7 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
           <annotation></annotation>
           <assignFromContext>false</assignFromContext>
           <assignToContext>false</assignToContext>
-          <inputType>STRING</inputType>
+          <inputType>ENCRYPTED</inputType>
           <recordKey></recordKey>
           <isList>false</isList>
           <required>true</required>
@@ -147,7 +147,7 @@ f8d7aef3-90f8-48d1-9def-c20b88580761.f502a1ed-2167-469b-abc8-1265d48c9fa6.descri
             <refId>b7bc3a8a-7980-4031-90c7-4c1a06ba2b77</refId>
             <refName>NA Admin User</refName>
           </link>
-          <identityAttribute>USERNAME</identityAttribute>
+          <identityAttribute>PASSWORD</identityAttribute>
         </identityBinding>
         <userInputBinding id="2632ea0c-a6c3-4272-b2e8-e15a902f65b4">
           <annotation></annotation>

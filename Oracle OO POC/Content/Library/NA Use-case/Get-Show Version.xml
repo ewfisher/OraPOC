@@ -154,7 +154,7 @@ ae3366c0-4ac0-4f84-bf23-016c713ec9cc.d6e9aab1-c1b5-4691-a1ba-48045a9271a0.descri
           <isPersisted>true</isPersisted>
           <inputSymbol>scriptName</inputSymbol>
           <listDelimiter>,</listDelimiter>
-          <value>sh version</value>
+          <value>Cisco IOS Show Version</value>
           <record>false</record>
         </staticBinding>
         <staticBinding id="52e42dc5-6799-4d27-8260-c75c49e4eba4">
