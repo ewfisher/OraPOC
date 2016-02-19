@@ -540,8 +540,8 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
       <annotation></annotation>
       <name>Error : failure</name>
       <bounds>
-        <x>775.0</x>
-        <y>519.0</y>
+        <x>748.0</x>
+        <y>439.0</y>
       </bounds>
       <layer>-1</layer>
       <hideInbound>false</hideInbound>
@@ -765,6 +765,10 @@ d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.fe00046d-2f23-4d80-bb56-4f74bbf4403e.descri
           <inputSymbol>ip</inputSymbol>
           <listDelimiter>,</listDelimiter>
           <record>false</record>
+          <validationFormat>
+            <refId>b6f54e01-c47c-4178-91da-f7a0d2e2d8fa</refId>
+            <refName>ip address</refName>
+          </validationFormat>
           <prompt>d0689ee9-0ae0-4d16-ad7a-ad65f4c440f0.a6a86665-4f1c-4a65-99a9-35a90dc0c4de.prompt</prompt>
           <isMultiSelect>false</isMultiSelect>
           <sourceDelimiter>|</sourceDelimiter>

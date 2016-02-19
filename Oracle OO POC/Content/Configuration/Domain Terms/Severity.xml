@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domainTerm id="b39efcfa-d753-48cd-85a3-30ea6130c51b">
+  <descriptionCdata><![CDATA[b39efcfa-d753-48cd-85a3-30ea6130c51b.description=Information, Warning, Error, Critical.
+]]></descriptionCdata>
+  <annotation>b39efcfa-d753-48cd-85a3-30ea6130c51b.description</annotation>
+  <name>Severity</name>
+  <storage>
+    <domainTermValue id="8f31f5f9-604f-4cc9-8691-3a93606abe12">
+      <annotation></annotation>
+      <name>Information</name>
+    </domainTermValue>
+    <domainTermValue id="1e2812d2-1dcb-4b85-afe8-5905199072c5">
+      <annotation></annotation>
+      <name>Warning</name>
+    </domainTermValue>
+    <domainTermValue id="c89a906e-663f-4784-96c2-dc3ba77b3102">
+      <annotation></annotation>
+      <name>Error</name>
+    </domainTermValue>
+    <domainTermValue id="75557aac-d413-4393-9949-a0f24dee88b6">
+      <annotation></annotation>
+      <name>Critical</name>
+    </domainTermValue>
+  </storage>
+</domainTerm>

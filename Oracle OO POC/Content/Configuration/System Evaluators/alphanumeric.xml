@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regexEvaluator id="a6726f71-b025-4667-946e-76cf4353d70b">
+  <descriptionCdata><![CDATA[a6726f71-b025-4667-946e-76cf4353d70b.description=Accepts non-empty lowercase alphanumeric strings (does not allow underscores '_').\n  Examples\: z3, 0x0b
+]]></descriptionCdata>
+  <annotation>a6726f71-b025-4667-946e-76cf4353d70b.description</annotation>
+  <name>alphanumeric</name>
+  <entireString>true</entireString>
+  <expression>[[:lower:][:digit:]]+</expression>
+  <ignoreCase>false</ignoreCase>
+  <multiLine>false</multiLine>
+  <regType>PERL5</regType>
+</regexEvaluator>
